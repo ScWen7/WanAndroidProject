@@ -18,7 +18,8 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutRes())
-
+        initActivity()
+        initData()
     }
 
     abstract  fun initActivity()

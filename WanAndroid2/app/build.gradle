@@ -46,6 +46,11 @@ dependencies {
     implementation rootProject.dependendcie.rxandroid
     implementation rootProject.dependendcie.rxkotlin
 
+
+    implementation rootProject.dependendcie.retrofit
+    implementation rootProject.dependendcie.retrofit_rxjava
+    implementation rootProject.dependendcie.retrofitConverterGson
+
     //gson
     implementation rootProject.dependendcie.gson
     //kotson
