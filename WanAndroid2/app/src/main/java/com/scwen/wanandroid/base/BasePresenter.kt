@@ -8,7 +8,7 @@ import io.reactivex.disposables.Disposable
  *  QQ ：811733738
  *  作用：
  */
-abstract class BasePresenter<M : BaseModel, V : BaseView> {
+abstract class BasePresenter<M : BaseModel, V : BaseView> : IPresenter<V> {
     protected var mModel: M? = null
     protected var mView: V? = null
 
@@ -17,14 +17,14 @@ abstract class BasePresenter<M : BaseModel, V : BaseView> {
     private var isViewAttached: Boolean = false
         get() = mView != null
 
-    constructor(view:V){
+    override fun attachView(view: V) {
         mView = view
         mModel = createModel()
     }
 
     open fun createModel(): M? = null
 
-    open fun detachView() {
+    override fun detachView() {
         clearDisposable()
         mModel?.onDetch()
         mModel = null
