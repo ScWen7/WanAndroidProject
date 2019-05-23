@@ -22,18 +22,23 @@ abstract class BaseFragment : Fragment(), BaseView {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val contentView = inflater.inflate(getLayoutRes(), container, false)
-        val parent = contentView?.parent as ViewGroup
+        val parent = contentView?.parent
         if (parent != null) {
-            parent.removeView(contentView)
+            (parent as ViewGroup).removeView(contentView)
         }
+        isViewCreate = true
+        return contentView
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         initView()
         if (isLazy) {
-            isViewCreate = true
             lazyLoad()
         } else {
             loadData()
         }
-        return contentView
     }
 
     open fun initView() {}

@@ -13,4 +13,8 @@ object Constant {
     const val COOKIE_SP ="wan_android_cookie"
 
     const val COOKIE_NAME_PREFIX = "cookie_"
+
+    const val REFRESH=10001
+
+    const val LOADMORE=10002
 }

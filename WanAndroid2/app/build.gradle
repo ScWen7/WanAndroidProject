@@ -62,5 +62,7 @@ dependencies {
     implementation rootProject.dependendcie.autosize
     implementation rootProject.dependendcie.eventbus
     implementation rootProject.dependendcie.smart_refresh
+    implementation rootProject.dependendcie.banner
+
     implementation project(':base')
 }

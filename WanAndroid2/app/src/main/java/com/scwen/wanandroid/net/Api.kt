@@ -1,6 +1,7 @@
 package com.scwen.wanandroid.net
 
 import com.google.gson.JsonElement
+import com.scwen.wanandroid.home.model.BannerBean
 import io.reactivex.Flowable
 import retrofit2.http.GET
 
@@ -11,5 +12,5 @@ import retrofit2.http.GET
  */
 interface Api {
     @GET("banner/json")
-    fun getBanners(): Flowable<BaseResult<JsonElement>>
+    fun getBanners(): Flowable<BaseResult<List<BannerBean>>>
 }

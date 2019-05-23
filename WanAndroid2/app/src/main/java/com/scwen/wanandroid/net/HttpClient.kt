@@ -26,10 +26,14 @@ class HttpClient private constructor() {
         .build()
         .create(Api::class.java)
 
-    private fun buildOkHttp() = OkHttpClient.Builder()
-        .connectTimeout(10, TimeUnit.SECONDS)
-        .readTimeout(10, TimeUnit.SECONDS)
-        .cookieJar(CookieJarImpl(PersistentCookieStore()))
-        .build()
+    private fun buildOkHttp(): OkHttpClient {
+        var okHttpClient = OkHttpClient.Builder()
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(10, TimeUnit.SECONDS)
+            .cookieJar(CookieJarImpl(PersistentCookieStore()))
+            .build()
+        okHttpClient.dispatcher().maxRequestsPerHost = 8
+        return okHttpClient
+    }
 
 }

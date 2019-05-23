@@ -4,7 +4,6 @@ import com.bumptech.glide.load.HttpException
 import com.google.gson.JsonParseException
 import io.reactivex.Flowable
 import io.reactivex.FlowableTransformer
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.*
@@ -20,7 +19,7 @@ import java.text.ParseException
  *  QQ ：811733738
  *  作用：
  */
-private val onErrorStub:(String,Boolean) -> Unit = { s: String, b: Boolean -> }
+private val onErrorStub: (String, Boolean) -> Unit = { s: String, b: Boolean -> }
 
 fun <T : Any> Flowable<BaseResult<T>>.excute(
     onSuccess: (T) -> Unit,

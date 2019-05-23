@@ -22,9 +22,9 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
         initData()
     }
 
-    abstract  fun initActivity()
+    abstract fun initActivity()
 
-    abstract  fun initData()
+    abstract fun initData()
 
     /**
      * 初始化 状态栏相关
@@ -32,7 +32,7 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
     open fun initImmBar() {
         mImmersionBar = ImmersionBar.with(this)
         mImmersionBar?.let {
-            it.statusBarDarkFont(true, 0.4f)
+            it.statusBarDarkFont(false, 0.4f)
             it.init()
         }
     }
