@@ -1,6 +1,6 @@
 package com.scwen.wanandroid.net
 
-import com.scwen.wanandroid.constant.HttpConstant
+import com.scwen.wanandroid.constant.Constant
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,7 +19,7 @@ class HttpClient private constructor() {
     }
 
     private fun buildApi() = Retrofit.Builder()
-        .baseUrl(HttpConstant.BASE_URL)
+        .baseUrl(Constant.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .client(buildOkHttp())
@@ -27,8 +27,9 @@ class HttpClient private constructor() {
         .create(Api::class.java)
 
     private fun buildOkHttp() = OkHttpClient.Builder()
-        .connectTimeout(10,TimeUnit.SECONDS)
-        .readTimeout(10,TimeUnit.SECONDS)
+        .connectTimeout(10, TimeUnit.SECONDS)
+        .readTimeout(10, TimeUnit.SECONDS)
+        .cookieJar(CookieJarImpl(PersistentCookieStore()))
         .build()
 
 }
