@@ -7,4 +7,11 @@
     <color name="FFFF9C27">#FF9C27</color>
     <color name="androidGreen">#FF74AE50</color>
     <color name="CCFFFFFF">#CCFFFFFF</color>
+    <color name="alphaff9c27">#66ff9c27</color>
+    <color name="FFFFD543">#FFFFD543</color>
+
+    <color name="E8E9F3">#E8E9F3</color>
+    <color name="FFFFBF00">#FFFFBF00</color>
+    <color name="FF8E92AD">#FF8E92AD</color>
+    <color name="F75553">#F75553</color>
 </resources>

@@ -22,7 +22,7 @@ abstract class BasePresenter<M : BaseModel, V : BaseView> : IPresenter<V> {
         mModel = createModel()
     }
 
-    open fun createModel(): M? = null
+    abstract fun createModel(): M?
 
     override fun detachView() {
         clearDisposable()

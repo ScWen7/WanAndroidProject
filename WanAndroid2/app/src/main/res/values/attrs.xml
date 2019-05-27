@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="ShadowView">
+        <attr name="paletteRadius" format="dimension" />
+        <attr name="paletteSrc" format="reference" />
+        <attr name="palettePadding" format="dimension" />
+        <attr name="paletteOffsetX" format="dimension" />
+        <attr name="paletteOffsetY" format="dimension" />
+        <attr name="paletteShadowRadius" format="dimension" />
+        <attr name="buttonHeight" format="dimension" />
+        <attr name="mainColor" format="color"/>
+
+    </declare-styleable>
+
+    <!--自定义Edittext输入显示密码和清空内容-->
+    <declare-styleable name="inputAttrs">
+        <attr name="closeTogDrawable" format="reference|color" />
+        <attr name="closeTogEnabled" format="boolean" />
+        <attr name="passwordTogDrawableOpen" format="reference|color" />
+        <attr name="passwordTogDrawableClose" format="reference|color" />
+        <attr name="passwordTogEnabled" format="boolean" />
+    </declare-styleable>
+</resources>

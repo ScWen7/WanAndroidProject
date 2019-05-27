@@ -8,4 +8,33 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+    <!--colorControlNormal 为没有获取焦点时候下划线的颜色-->
+    <!--colorControlActivated 为获取焦点时候光标与下划线的颜色-->
+    <style name="MyEditText" parent="AppTheme">
+        <item name="colorControlNormal">@color/E8E9F3</item>
+        <item name="colorControlActivated">@color/FFFFBF00</item>
+        <item name="colorAccent">@color/FFFFBF00</item>
+    </style>
+
+    <!-- 设置提示文字样式 -->
+    <style name="hintAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/FF8E92AD</item>
+    </style>
+
+    <!-- 设置错误提示文字样式 -->
+    <style name="errorAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/F75553</item>
+    </style>
+
+    <!-- 设置超出长度提示文字样式 -->
+    <style name="overAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8E92AD</item>
+    </style>
+
+
 </resources>
