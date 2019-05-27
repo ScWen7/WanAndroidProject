@@ -30,6 +30,7 @@ ext {
             autosize        : 'me.jessyan:autosize:1.1.2',
             eventbus        : 'org.greenrobot:eventbus:3.1.1',
             smart_refresh   : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-9',
-            banner:'cn.bingoogolapple:bga-banner:2.2.6@aar'
+            banner:'cn.bingoogolapple:bga-banner:2.2.6@aar',
+            circleImage:'de.hdodenhof:circleimageview:3.0.0'
     ]
 }

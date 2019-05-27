@@ -63,6 +63,7 @@ dependencies {
     implementation rootProject.dependendcie.eventbus
     implementation rootProject.dependendcie.smart_refresh
     implementation rootProject.dependendcie.banner
+    implementation rootProject.dependendcie.circleImage
 
     implementation project(':base')
 }
