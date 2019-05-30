@@ -14,4 +14,8 @@
     <color name="FFFFBF00">#FFFFBF00</color>
     <color name="FF8E92AD">#FF8E92AD</color>
     <color name="F75553">#F75553</color>
+    <color name="F44336">#f44336</color>
+    <color name="FF00bcd4">#FF00bcd4</color>
+    <color name="text_999">#999999</color>
+    <color name="text_333">#333333</color>
 </resources>
