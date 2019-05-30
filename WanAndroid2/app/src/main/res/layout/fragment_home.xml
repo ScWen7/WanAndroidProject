@@ -5,17 +5,6 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
-    <cn.bingoogolapple.bgabanner.BGABanner
-            android:id="@+id/banner_home"
-            android:layout_width="match_parent"
-            app:banner_transitionEffect="defaultEffect"
-            app:banner_indicatorGravity="bottom|right"
-            app:banner_tipTextSize="14sp"
-            app:banner_tipTextColor="@color/CCFFFFFF"
-            android:layout_height="200dp">
-
-    </cn.bingoogolapple.bgabanner.BGABanner>
-
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
             android:id="@+id/refresh_home"
             android:layout_width="match_parent"

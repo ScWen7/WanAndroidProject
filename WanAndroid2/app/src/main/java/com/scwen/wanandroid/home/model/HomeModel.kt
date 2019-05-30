@@ -12,4 +12,10 @@ import io.reactivex.Flowable
  */
 class HomeModel : BaseModel() {
     fun getBanners(): Flowable<BaseResult<List<BannerBean>>> = HttpClient.api.getBanners()
+
+
+    fun getTop(): Flowable<BaseResult<MutableList<Article>>> = HttpClient.api.getTopArticles()
+
+
+    fun  getArticles(page :Int): Flowable<BaseResult<PageBean<Article>>>  = HttpClient.api.getArticles(page)
 }

@@ -27,10 +27,13 @@ class HttpClient private constructor() {
         .create(Api::class.java)
 
     private fun buildOkHttp(): OkHttpClient {
+        val sslParams1 = HttpsUtils.getSslSocketFactory()
         var okHttpClient = OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .readTimeout(10, TimeUnit.SECONDS)
             .cookieJar(CookieJarImpl(PersistentCookieStore()))
+            .sslSocketFactory(sslParams1.sSLSocketFactory, sslParams1.trustManager)
+            .hostnameVerifier(HttpsUtils.SafeHostnameVerifier())
             .build()
         okHttpClient.dispatcher().maxRequestsPerHost = 8
         return okHttpClient

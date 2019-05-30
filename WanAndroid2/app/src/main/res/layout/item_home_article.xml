@@ -110,9 +110,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
             android:layout_toRightOf="@+id/iv_article_thumbnail"
             android:gravity="center"
+            android:layout_toLeftOf="@id/iv_like"
             android:textColor="@color/text_999"
             android:textSize="12dp"
     />

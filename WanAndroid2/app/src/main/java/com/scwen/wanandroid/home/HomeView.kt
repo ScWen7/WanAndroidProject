@@ -1,6 +1,7 @@
 package com.scwen.wanandroid.home
 
 import com.scwen.wanandroid.base.BaseView
+import com.scwen.wanandroid.home.model.Article
 import com.scwen.wanandroid.home.model.BannerBean
 
 /**
@@ -10,4 +11,8 @@ import com.scwen.wanandroid.home.model.BannerBean
  */
 interface HomeView : BaseView {
     fun showBanners(banners: List<BannerBean>)
+
+    fun showArticles(articles: MutableList<Article>)
+
+    fun loadFail(msg:String)
 }

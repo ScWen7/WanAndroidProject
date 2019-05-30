@@ -25,7 +25,7 @@ class MainActivity : BaseActivity() {
 
     override fun initData() {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(container,MineFragment(),"home").commit()
+        transaction.add(container,HomeFragment(),"home").commit()
     }
 
 

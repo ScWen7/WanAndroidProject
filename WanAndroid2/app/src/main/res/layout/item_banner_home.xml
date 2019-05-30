@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner_home"
+        android:layout_width="match_parent"
+        app:banner_transitionEffect="defaultEffect"
+        app:banner_indicatorGravity="bottom|right"
+        app:banner_tipTextSize="14sp"
+        app:banner_tipTextColor="@color/CCFFFFFF"
+        android:layout_height="200dp" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+</cn.bingoogolapple.bgabanner.BGABanner>

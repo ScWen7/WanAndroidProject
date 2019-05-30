@@ -1,6 +1,5 @@
 package com.scwen.wanandroid.home.model
 
-import android.nfc.Tag
 
 /**
  * Created by scwen on 2019/5/23.
@@ -56,6 +55,9 @@ data class Article(
     val zan: Int,
     var top: Int //是否是置顶文章
 )
-
+data class Tag(
+     val name: String,
+     val url: String
+)
 
 

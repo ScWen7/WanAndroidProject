@@ -1,5 +1,6 @@
 package com.scwen.wanandroid.net
 
+import android.util.Log
 import com.bumptech.glide.load.HttpException
 import com.google.gson.JsonParseException
 import io.reactivex.Flowable
@@ -19,7 +20,7 @@ import java.text.ParseException
  *  QQ ：811733738
  *  作用：
  */
-private val onErrorStub: (String, Boolean) -> Unit = { s: String, b: Boolean -> }
+private val onErrorStub: (String, Boolean) -> Unit = { s: String, b: Boolean ->  }
 
 fun <T : Any> Flowable<BaseResult<T>>.excute(
     onSuccess: (T) -> Unit,
@@ -35,6 +36,7 @@ fun <T : Any> Flowable<BaseResult<T>>.excute(
         },
         onError = {
             onHandleError.invoke(handleException(it), false)
+            Log.e("tag","error${it.message}")
         }
     )
 }
