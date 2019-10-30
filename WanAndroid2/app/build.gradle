@@ -66,4 +66,6 @@ dependencies {
     implementation rootProject.dependendcie.circleImage
 
     implementation project(':base')
+
+    implementation 'com.netlibrary:KotlinNet:1.0.0'
 }

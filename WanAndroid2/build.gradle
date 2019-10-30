@@ -19,6 +19,22 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url 'https://dl.bintray.com/baobaoyuan/maven/'
+        }
+        maven {
+            url 'https://dl.bintray.com/woodys/maven/'
+        }
+        maven {
+            url 'https://dl.bintray.com/cz/maven/'
+        }
+        maven { url 'https://maven.google.com' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+
+
         mavenCentral()
         google()
         jcenter()

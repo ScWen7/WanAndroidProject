@@ -6,11 +6,7 @@ import com.scwen.wanandroid.base.App
 import com.scwen.wanandroid.constant.Constant
 import kotlin.reflect.KProperty
 
-/**
- * Created by scwen on 2019/5/23.
- *  QQ ：811733738
- *  作用：
- */
+
 class Preference<T>(val key: String, val default: T) {
 
 
