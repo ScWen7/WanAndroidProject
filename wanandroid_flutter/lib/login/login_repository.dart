@@ -4,7 +4,7 @@ import '../config/service_url.dart';
 class LoginRepository {
   Future login(String name, String password) {
     var formData = {'username': name, 'password': password};
-    return request(servicePath['login'], formData: formData);
+    return request(WanAndroidApi.LOGIN_URL, formData: formData);
   }
 
 }

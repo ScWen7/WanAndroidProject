@@ -1,11 +1,11 @@
-import 'package:flutter/cupertino.dart' as prefix0;
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wanandroid_flutter/config/config.dart';
+import 'package:wanandroid_flutter/config/const.dart';
+import 'package:wanandroid_flutter/config/routes.dart';
 import 'package:wanandroid_flutter/login/bloc/index.dart';
-import 'package:wanandroid_flutter/login/login_repository.dart';
-import 'package:wanandroid_flutter/main.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -85,14 +85,10 @@ class _LoginFormState extends State<LoginForm> {
         }
 
         if(state.isSuccess){
-          print('screen  Login success' );
-          Navigator.pop(context);
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context){
-              return MyHomePage(title: '主页',);
-            }
-          ));
-
+          SpUtil.putBool(IS_LOGIN, true);
+          var isLogin =  SpUtil.getBool(IS_LOGIN,defValue: false);
+          print(isLogin);
+          Navigator.pushReplacementNamed(context,RouteConfig.TODOS_ROUTE);
         }
 
       },

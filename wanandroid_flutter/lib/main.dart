@@ -1,5 +1,10 @@
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
+import 'package:wanandroid_flutter/config/routes.dart';
 import 'package:wanandroid_flutter/login/login_form.dart';
+import 'package:wanandroid_flutter/welcome/welcome_screen.dart';
+import 'util/util.dart';
+import 'todos/todos_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,6 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SpUtil.getInstance();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -21,7 +27,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      routes: {
+        RouteConfig.WELCOME_ROUTE : (context)=> WelcomeScreen(),
+        RouteConfig.LOGIN_ROUTE : (context)=> LoginScreen(),
+        RouteConfig.TODOS_ROUTE : (context)=> TodosScreen()
+      },
+      home:Util.isLogin()? TodosScreen():LoginScreen(),
     );
   }
 }

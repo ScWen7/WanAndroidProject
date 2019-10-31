@@ -1,0 +1,1 @@
+enum TodoStatus{incompleted, complated}
